@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+- '11'
+script:
+- npm test
+deploy:
+  provider: npm
+  email: anf4@cornell.edu
+  api_key:
+    secure: GUgvG/vkDG4MiEkm/W5zAg2Eg9XosgHLVkqSWAXs+x1ok3SUUz1hapUCWtESw31mUdcf5QuT29D6evoJOgS992YveM2hFjjAmVrnM6lMPPXas61Etown56dbs7N6EMnuxqU8CQgoGuUmL4228Jw//YZTa+Zoin+arjn8QRneZs0MZGvq6BjgugmDs73eT5KfFWlwnyzTCBQAvrlDjsM8DRY+DooxDfMPzRWsl865UKAXLueAgcBLjFvLluz26aeb+eyqy1SPi1DFO2SvFcZB8s0AEFtHucoH5XjfuaWbtF5kdhwgX2ApBaqIU6O5PLp/emuxvlogZABLsSDYsneSW7vO7lRoRdsFwUbM0QfTw4E4HIyKaPP31T4oBUkbcrRc2qyZhkGB4XzJI9NikgcwQ2QShUkKL+vi2grEroIlaguxIwQdW647NiVQSGb+buKMLn1SLTNfn+DfvFQcdw0uI1USswv54rZ8mMTt/MWujlR2Sce5xu6/avEj6Ut4qlRLO58e0Jvm8qrQKf2SrEWAfzKuiCfatNhEq6Gi4YOk5ZKysigkluSU9ntxvdeHEA9s3s2u8nbxwe3wYPK/QYcv90cJvdgFUlvQqT7Qx67KH9X7zKSGxh25dozhfbtbwICT1YLyyFWw3f2aIcw8ij3oMNeIyfGTqlyEXcoLmUIZQ/0=
+  on:
+    tags: true
+    branch: master
+    node: '10'
+    repo: Cimpress-MCP/request-promise-middleware-framework

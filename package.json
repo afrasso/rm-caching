@@ -1,0 +1,56 @@
+{
+  "name": "rm-caching",
+  "version": "1.0.0",
+  "description": "Middleware for request and request-promise to support outbound request caching.",
+  "main": "index.js",
+  "scripts": {
+    "document": "jsdoc2md \"src/*.js\" > apidoc.md",
+    "pretest": "eslint ./src/**/*.js && depcheck . --ignores eslint-config-prettier",
+    "test": "nyc mocha ./src/test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cimpress-MCP/rm-caching.git"
+  },
+  "keywords": [
+    "caching",
+    "request",
+    "request-middleware",
+    "request-promise"
+  ],
+  "author": "Cimpress",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cimpress-MCP/rm-caching/issues"
+  },
+  "homepage": "https://github.com/Cimpress-MCP/rm-caching#readme",
+  "devDependencies": {
+    "depcheck": "^0.7.2",
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "prettier": "^1.16.4"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 90,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "src/test/**/*.js"
+    ],
+    "cache": true,
+    "all": true
+  }
+}
